@@ -74,9 +74,8 @@ router.get("/:orderId", (req, res, next) => {
             })
         })
         .catch(err => {
-            res.status(500).json({
-                error: err
-            })
+            console.error(err);
+            res.status(500).json({ error: err })
         });
 });
 
@@ -97,9 +96,8 @@ router.delete("/:orderId", (req, res, next) => {
             })
         })
         .catch(err => {
-            res.status(500).json({
-                error: err
-            })
+            console.error(err);
+            res.status(500).json({ error: err })
         })
 });
 
